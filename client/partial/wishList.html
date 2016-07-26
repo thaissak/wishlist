@@ -1,0 +1,13 @@
+<!-- this is are page to show all of the wishlist items -->
+
+<div class="wishWindow">
+  <h3>Your Wish List</h3>
+  <div class="wishLiist" ng-repeat="list in lists">
+    <h1><a href="#/wishList/show/{{list._id}}">{{list.name}}</a></h1>
+    <h2>{{list.description}}</h2>
+    <h3>{{list.type}}</h3>
+    <h3>{{list.item}}</h3>
+  </div>
+  <h2>Add/Update List</h2>
+  <a href="#/createList">Create New List</a>
+</div>
