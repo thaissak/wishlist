@@ -4,17 +4,18 @@ module.exports = function(app){
 	var inst = require('../controller/institutions.js');
 	var logins = require('../controller/logins.js');
 
-    app.post('/login', function(req,res){
+    app.post('/login_process', function(req,res){
+        console.log('Got to routes');
     	logins.userLogin(req,res);
-    })
+    });
 
     app.post('/register/user', function(req,res){
     	users.addUser(req,res);
-    })
+    });
 
     app.post('/register/institution', function(req,res){
     	inst.addInst(req,res);
-    })
+    });
 
 
-}
+};

@@ -14,16 +14,16 @@ app.controller('usersController', ['$scope', 'usersFactory', '$routeParams', '$l
 		else{
 			$scope.error_msg = "Passwords don't match. Please try again!";
 		}
-	}
+	};
 
-	$scope.userLogin = function(){
+	$scope.login_user = function(){
+		console.log('1');
 		usersFactory.userLogin($scope.userLogin, function(data){
 			if(data.error){
 					console.log("error from login - controller", data.error);
 					$scope.error = data.error;
 					$location.path('/login');
-				}
-			else{
+			} else{
 				console.log("no error login - controller");
 				var user = data;
 				$cookies.putObject('user', {id:user._id, name: user.name});
@@ -32,7 +32,7 @@ app.controller('usersController', ['$scope', 'usersFactory', '$routeParams', '$l
 				$location.path('/dashboard/user');
 			}
 		})
-}
+	};
 
 	// $scope.userLogout = function(){
 	// 	$cookies.remove('user');
