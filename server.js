@@ -6,7 +6,7 @@ app = express();
 
 var bodyParser = require('body-parser');
 
-var db = require('./server/config/mongoose.js');
+var db = require('./server/config/db.js');
 
 var routes = require('./server/config/routes.js');
 
