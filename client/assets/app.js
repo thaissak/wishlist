@@ -5,12 +5,16 @@ app.config(function($routeProvider){
 
 	.when('/login', {
 		templateUrl: 'partial/login.html',
-		controller: 'usersController'
 	})
 
 	.when('/dashboard/user', {
-		templateUrl: 'partial/dashboard.html',
+		templateUrl: 'partial/user.html',
 		controller: 'usersController'
+	})
+
+	.when('/dashboard/institution', {
+		templateUrl: 'partial/institution.html',
+		controller: 'instController'
 	})
 
 	.when('/register/user', {

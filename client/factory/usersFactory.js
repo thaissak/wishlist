@@ -13,8 +13,7 @@ app.factory('usersFactory', function($http){
 	};
 
 	factory.userLogin = function(data, callback){
-		console.log('2');
-		$http.post('/login_process').then(function(result){
+		$http.post('/login/user', data).then(function(result){
 			console.log("got user to login to factory", result.data.password);
 			if(result.data.password == 'passed'){
 				console.log("password check got to factory ok", result.data.password);

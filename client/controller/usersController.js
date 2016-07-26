@@ -17,8 +17,8 @@ app.controller('usersController', ['$scope', 'usersFactory', '$routeParams', '$l
 	};
 
 	$scope.login_user = function(){
-		console.log('1');
 		usersFactory.userLogin($scope.userLogin, function(data){
+			console.log('login data', $scope.userLogin);
 			if(data.error){
 					console.log("error from login - controller", data.error);
 					$scope.error = data.error;
@@ -34,10 +34,11 @@ app.controller('usersController', ['$scope', 'usersFactory', '$routeParams', '$l
 		})
 	};
 
-	// $scope.userLogout = function(){
-	// 	$cookies.remove('user');
-	// 	$location.path('/');
-	// }
+	$scope.userLogout = function(){
+		$cookies.remove('user');
+		console.log($cookies.getObject('user'));
+		$location.path('/login');
+	}
 	
 	
 }]);

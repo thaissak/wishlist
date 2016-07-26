@@ -4,9 +4,12 @@ module.exports = function(app){
 	var inst = require('../controller/institutions.js');
 	var logins = require('../controller/logins.js');
 
-    app.post('/login_process', function(req,res){
-        console.log('Got to routes');
+    app.post('/login/user', function(req,res){
     	logins.userLogin(req,res);
+    });
+
+    app.post('/login/institution', function(req,res){
+    	logins.instLogin(req,res);
     });
 
     app.post('/register/user', function(req,res){

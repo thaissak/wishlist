@@ -3,18 +3,18 @@
 <h3>{{ error }}</h3>
 
 <h3>Institution</h3>
-<form>
+<form ng-controller="instController">
 	<label>
 		User Name:<input type="text" ng-model="instLogin.name">
 	</label>
 	<label>
 		Password:<input type="password" ng-model="instLogin.password">
 	</label>
-	<button type="submit" ng-click="instLogin()">Login</button>
+	<button type="submit" ng-click="login_inst()">Login</button>
 </form>
 
 <h3>User</h3>
-<form>
+<form ng-controller="usersController">
 	<label>
 		E-mail:<input type="text" ng-model="userLogin.email">
 	</label>
