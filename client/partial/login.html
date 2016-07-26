@@ -1,0 +1,25 @@
+<h1>Login</h1>
+
+<h3>{{ error }}</h3>
+
+<h3>Institution</h3>
+<form>
+	<label>
+		User Name:<input type="text" ng-model="instLogin.name"></input>
+	</label>
+	<label>
+		Password:<input type="password" ng-model="instLogin.password"></input>
+	</label>
+	<button type="submit" ng-click="instLogin()">Login</button>
+</form>
+
+<h3>User</h3>
+<form>
+	<label>
+		E-mail:<input type="text" ng-model="userLogin.email"></input>
+	</label>
+	<label>
+		Password:<input type="password" ng-model="userLogin.password"></input>
+	</label>
+	<button type="submit" ng-click="userLogin()">Login</button>
+</form>
